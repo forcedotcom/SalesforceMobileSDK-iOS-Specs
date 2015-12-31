@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SalesforceSDKCore"
-  s.version      = "4.0.0"
+  s.version      = "4.0.1"
   s.summary      = "Salesforce Mobile SDK for iOS"
   s.homepage     = "https://github.com/forcedotcom/SalesforceMobileSDK-iOS"
 
@@ -20,10 +20,8 @@ Pod::Spec.new do |s|
   s.subspec 'SalesforceSDKCore' do |sdkcore|
 
       sdkcore.dependency 'CocoaLumberjack', '~> 2.2.0'
-      sdkcore.header_dir = 'Headers/SalesforceSDKCore'
       sdkcore.libraries = 'z'
       sdkcore.resource_bundles = { 'SalesforceSDKResources' => [ 'shared/resources/SalesforceSDKResources.bundle/**' ], 'Settings' => [ 'shared/resources/Settings.bundle/**' ] }
-      sdkcore.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Headers/Public/#{s.name}/Headers" }
 
       sdkcore.subspec 'base' do |sp|
           sp.source_files = 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/Logging/SFLogger.h', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/Logging/SFLogger.m', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/NSData+SFAdditions.h', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/NSData+SFAdditions.m', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/NSString+SFAdditions.h', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/NSString+SFAdditions.m', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/NSNotificationCenter+SFAdditions.h', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/NSNotificationCenter+SFAdditions.m', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/SFPathUtil.h', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/SFPathUtil.m', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/SFFileProtectionHelper.h', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/SFFileProtectionHelper.m', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/Logging/SFCocoaLumberJackCustomFormatter.h', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/Logging/SFCocoaLumberJackCustomFormatter.m', 'libs/SalesforceSDKCore/SalesforceSDKCore/Classes/Common/SalesforceSDKConstants.h'
@@ -49,8 +47,6 @@ Pod::Spec.new do |s|
           sp.requires_arc = true
           sp.prefix_header_contents = '#import "SFLogger.h"', '#import "SalesforceSDKConstants.h"'
       end
-      
-      #sdkcore.prefix_header_contents = '#import <SalesforceSDKCore/SFLogger.h>', '#import <SalesforceSDKCore/SalesforceSDKConstants.h>'
 
   end
 
