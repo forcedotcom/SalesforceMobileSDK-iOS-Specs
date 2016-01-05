@@ -2,17 +2,16 @@ Pod::Spec.new do |s|
 
   s.name         = "FMDB"
   s.version      = "4.0.1"
-  s.summary      = "Salesforce Mobile SDK for iOS - FMDB"
-  s.homepage     = "https://github.com/forcedotcom/SalesforceMobileSDK-iOS"
+  s.summary      = "A Cocoa / Objective-C wrapper around SQLite - Salesforce Mobile SDK fork"
+  s.homepage     = "https://github.com/ccgus/fmdb"
 
-  s.license      = { :type => "Salesforce.com Mobile SDK License", :file => "LICENSE.md" }
-  s.author       = { "Kevin Hawkins" => "khawkins@salesforce.com" }
+  s.license      = "MIT"
+  s.author       = { "August Mueller" => "gus@flyingmeat.com" }
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/khawkins/SalesforceMobileSDK-iOS.git",
-                     #:tag => "pod_v#{s.version}",
-                     :tag => "pod_v4.0.1_test",
+  s.source       = { :git => "https://github.com/forcedotcom/SalesforceMobileSDK-iOS.git",
+                     :tag => "pod_v#{s.version}",
                      :submodules => true }
 
   s.requires_arc = true
