@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
       sqlcipher.source_files = 'external/fmdb/src/fmdb/FM*.{h,m}'
       sqlcipher.exclude_files = 'external/fmdb/src/fmdb.m'
-      sqlcipher.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DSQLITE_HAS_CODEC -DHAVE_USLEEP=1' }
+      sqlcipher.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DSQLITE_HAS_CODEC' }
       sqlcipher.preserve_paths = 'external/ThirdPartyDependencies/sqlcipher/LICENSE'
       sqlcipher.vendored_libraries = 'external/ThirdPartyDependencies/sqlcipher/libsqlcipher.a'
       
