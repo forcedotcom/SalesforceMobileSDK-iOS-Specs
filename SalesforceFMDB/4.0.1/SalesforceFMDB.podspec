@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SalesforceFMDB"
-  s.module_name  = "FMDB"
+  s.module_name  = "fmdb
   s.version      = "4.0.1"
   s.summary      = "A Cocoa / Objective-C wrapper around SQLite - Salesforce Mobile SDK fork"
   s.homepage     = "https://github.com/ccgus/fmdb"
