@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "SalesforceFMDB"
+  s.name         = "FMDB"
   s.version      = "4.0.1"
   s.summary      = "A Cocoa / Objective-C wrapper around SQLite - Salesforce Mobile SDK fork"
   s.homepage     = "https://github.com/ccgus/fmdb"
@@ -15,14 +15,14 @@ Pod::Spec.new do |s|
                      :submodules => true }
 
   s.requires_arc = true
-  s.default_subspec  = 'SalesforceFMDB'
+  s.default_subspec  = 'FMDB'
 
-  s.subspec 'SalesforceFMDB' do |salesforcefmdb|
+  s.subspec 'FMDB' do |fmdb|
 
-      salesforcefmdb.source_files = 'external/fmdb/src/fmdb/FM*.{h,m}'
-      salesforcefmdb.exclude_files = 'external/fmdb/src/fmdb.m'
-      salesforcefmdb.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DSQLITE_HAS_CODEC' }
-      salesforcefmdb.dependency 'SQLCipher/fts', '~> 3.3.1'
+      fmdb.source_files = 'external/fmdb/src/fmdb/FM*.{h,m}'
+      fmdb.exclude_files = 'external/fmdb/src/fmdb.m'
+      fmdb.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DSQLITE_HAS_CODEC' }
+      fmdb.dependency 'SQLCipher/fts', '~> 3.3.1'
   end
 
 end
