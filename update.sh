@@ -69,7 +69,7 @@ parse_opts ()
 get_root_folder ()
 {
     local current_folder=`dirname "${BASH_SOURCE[0]}"`
-    echo `cd $current_folder && cd .. && pwd`
+    echo `cd $current_folder && pwd`
 }
 
 update_branch ()
