@@ -59,9 +59,8 @@ parse_opts ()
    	     # No action
     	    :
    	 else
-    #	    echo "${OPT_VERSION} is not a valid version name.  Should be in the format <integer.integer.interger>"
-     # 	  exit 2
-            :
+     	echo "${OPT_VERSION} is not a valid version name.  Should be in the format <integer.integer.interger>"
+      	exit 2
     fi
 
 }
