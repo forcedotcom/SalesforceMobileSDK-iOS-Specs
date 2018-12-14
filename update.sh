@@ -38,12 +38,12 @@ parse_opts ()
 
     valid_branch_regex='^[a-zA-Z0-9_][a-zA-Z0-9_]*(/[a-zA-Z0-9_][a-zA-Z0-9_]*)?$'
     if [[ "${OPT_BRANCH}" =~ $valid_branch_regex ]]
-   	 then
-   	     # No action
-    	    :
-   	 else
-    	    echo "${OPT_BRANCH} is not a valid branch name.  Should be in the format <[remote/]branch name>"
-      	  exit 2
+     then
+         # No action
+            :
+     else
+            echo "${OPT_BRANCH} is not a valid branch name.  Should be in the format <[remote/]branch name>"
+          exit 2
     fi
 
     if [ "${OPT_VERSION}" == "" ]
@@ -55,12 +55,12 @@ parse_opts ()
 
     valid_version_regex='^[0-9]+\.[0-9]+\.[0-9]+$'
     if [[ "${OPT_VERSION}" =~ $valid_version_regex ]]
-   	 then
-   	     # No action
-    	    :
-   	 else
-    	    echo "${OPT_VERSION} is not a valid version name.  Should be in the format <integer.integer.interger>"
-      	  exit 2
+     then
+         # No action
+            :
+     else
+        echo "${OPT_VERSION} is not a valid version name.  Should be in the format <integer.integer.interger>"
+        exit 2
     fi
 
 }
