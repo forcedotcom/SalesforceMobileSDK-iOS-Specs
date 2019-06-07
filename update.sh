@@ -91,17 +91,16 @@ update_repo ()
     if [ ! -d "$repo_dir" ]
     then
         echo "Cloning $git_repo_url into $repo_dir"
-        git clone ${git_repo_url} ${repo_dir}
+        git clone --branch ${OPT_BRANCH} --single-branch --depth 1 ${git_repo_url} ${repo_dir}
         cd ${repo_dir}
     else
         echo "Found repo at $repo_dir.  Fetching the latest"
         cd ${repo_dir}
         git fetch origin
+        git checkout ${OPT_BRANCH}
+        update_branch
     fi
 
-    echo "Checking out the ${OPT_BRANCH} branch."
-    git checkout ${OPT_BRANCH}
-    update_branch
     cd ${ROOT_FOLDER}
 }
 
@@ -121,6 +120,9 @@ copy_specs ()
 ROOT_FOLDER=$(get_root_folder)
 IOS_SDK_REPO_PATH="https://github.com/forcedotcom/SalesforceMobileSDK-iOS.git"
 IOS_SDK_FOLDER="SalesforceMobileSDK-iOS"
+IOS_HYBRID_SDK_REPO_PATH="https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Hybrid.git"
+IOS_HYBRID_SDK_FOLDER="SalesforceMobileSDK-iOS-Hybrid"
+
 
 echo "ROOT->$ROOT_FOLDER"
 
@@ -132,8 +134,15 @@ cd ${ROOT_FOLDER}
 echo "*** Getting main repo ***"
 update_repo "${IOS_SDK_FOLDER}" "${IOS_SDK_REPO_PATH}"
 
-echo "*** Copying specs ***"
+echo "*** Copying specs from main repo ***"
 copy_specs "${IOS_SDK_FOLDER}" "${OPT_VERSION}"
+
+echo "*** Getting hybrid repo ***"
+update_repo "${IOS_HYBRID_SDK_FOLDER}" "${IOS_HYBRID_SDK_REPO_PATH}"
+
+echo "*** Copying specs from main repo ***"
+copy_specs "${IOS_HYBRID_SDK_FOLDER}" "${OPT_VERSION}"
 
 echo "*** Cleanup ***"
 rm -rf $IOS_SDK_FOLDER
+rm -rf $IOS_HYBRID_SDK_FOLDER
