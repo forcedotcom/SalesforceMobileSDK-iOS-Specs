@@ -16,7 +16,7 @@ AgentforceService provides a comprehensive toolkit for developers to integrate i
   s.homepage         = 'https://github.com/forcedotcom/AgentforceMobileService-iOS'
   s.license          = { :type => 'Salesforce', :file => 'LICENSE.txt'}
   s.author           = { 'Mobile Agentforce SDK' => 'mobile-agentforcesdk-public@salesforce.com' }
-  s.source           = { :http => 'https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/2.4.1/AgentforceMobileService-iOS-2.4.1.zip' }
+  s.source           = { :http => 'https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/2.4.1/AgentforceMobileService-iOS-2-4-1.zip' }
 
   s.ios.deployment_target = '16.0'
   s.swift_versions = ["5.0", "5.1"]
