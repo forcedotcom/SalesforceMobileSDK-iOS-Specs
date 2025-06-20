@@ -14,7 +14,7 @@ AgentforceService provides a comprehensive toolkit for developers to integrate i
                        DESC
 
   s.homepage         = 'https://github.com/forcedotcom/AgentforceMobileService-iOS'
-  s.license          = { :type => 'Salesforce' file => 'LICENSE.txt'}
+  s.license          = { :type => 'Salesforce', file => 'LICENSE.txt'}
   s.author           = { 'Mobile Agentforce SDK' => 'mobile-agentforcesdk-public@salesforce.com' }
   s.source           = { :http => 'https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/2.4.1/AgentforceMobileService-iOS-2.4.1.zip' }
 
