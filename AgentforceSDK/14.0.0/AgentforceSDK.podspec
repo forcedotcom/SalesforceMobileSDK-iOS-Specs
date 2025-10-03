@@ -9,7 +9,7 @@ The Agentforce Mobile SDK empowers you to integrate Salesforce's feature-rich, t
   s.homepage         = 'https://https://github.com/salesforce/AgentforceMobileSDK-iOS'
   s.license          = { :type => 'Salesforce', :file => 'LICENSE.txt' }
   s.author           = { 'Mobile Agentforce SDK' => 'mobile-agentforcesdk-public@salesforce.com'  }
-  s.source           = { :http => 'https://github.com/salesforce/AgentforceMobileSDK-iOS/releases/download/11.6.0/AgentforceMobileSDK-iOS-256-3.xcframework.zip' }
+  s.source           = { :http => 'https://github.com/salesforce/AgentforceMobileSDK-iOS/releases/download/14.0.0/AgentforceMobileSDK-iOS-258-0.xcframework.zip' }
 
   s.ios.deployment_target = '17.0'
   s.swift_versions = ["5.0", "5.1"]

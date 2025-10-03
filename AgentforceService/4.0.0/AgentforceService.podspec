@@ -9,7 +9,7 @@ AgentforceService provides a comprehensive toolkit for developers to integrate i
   s.homepage         = 'https://github.com/forcedotcom/AgentforceMobileService-iOS'
   s.license          = { :type => 'Salesforce', :file => 'LICENSE.txt'}
   s.author           = { 'Mobile Agentforce SDK' => 'mobile-agentforcesdk-public@salesforce.com' }
-  s.source           = { :http => 'https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/3.2.0/AgentforceMobileService-256-3.xcframework.zip' }
+  s.source           = { :http => 'https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/4.0.0/AgentforceMobileService-iOS-258-0.xcframework.zip' }
 
   s.ios.deployment_target = '16.0'
   s.swift_versions = ["5.0", "5.1"]
@@ -19,5 +19,5 @@ AgentforceService provides a comprehensive toolkit for developers to integrate i
   s.dependency 'SalesforceNetwork'
   s.dependency 'SalesforceLogging'
   s.dependency 'LiveKitClient'
-  s.dependency 'Messaging-InApp-Core'
+  s.dependency 'Messaging-InApp-Core', '> 1.9.2'
 end
