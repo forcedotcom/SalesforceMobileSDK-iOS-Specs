@@ -11,7 +11,7 @@ AgentforceService provides a comprehensive toolkit for developers to integrate i
   s.author           = { 'Mobile Agentforce SDK' => 'mobile-agentforcesdk-public@salesforce.com' }
   s.source           = { :http => 'https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/4.9.11/AgentforceMobileService-260-1.xcframework.zip' }
 
-  s.ios.deployment_target = '16.0'
+  s.ios.deployment_target = '17.0'
   s.swift_versions = ["5.0", "5.1"]
 
   s.vendored_framework = 'AgentforceService.xcframework'
