@@ -16,5 +16,7 @@ AgentforceVoice provides real-time voice interaction capabilities for the Agentf
 
   s.vendored_framework = 'AgentforceVoice.xcframework'
 
-  s.dependency 'AgentforceSDK', '~> 15'
+  s.dependency 'AgentforceService', '~> 5'
+  s.dependency 'SalesforceNetwork'
+  s.dependency 'SalesforceLogging'
 end
