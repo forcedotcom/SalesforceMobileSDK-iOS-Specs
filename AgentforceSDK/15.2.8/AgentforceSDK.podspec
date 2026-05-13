@@ -16,7 +16,7 @@ The Agentforce Mobile SDK empowers you to integrate Salesforce's feature-rich, t
 
   s.vendored_framework = 'AgentforceSDK.xcframework'
 
-  s.dependency 'AgentforceService', '~> '
+  s.dependency 'AgentforceService', '~> 4'
   s.dependency 'SalesforceNavigation'
   s.dependency 'SalesforceLogging'
   s.dependency 'SalesforceNetwork'
