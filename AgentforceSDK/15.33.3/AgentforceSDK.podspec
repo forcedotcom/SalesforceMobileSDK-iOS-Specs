@@ -22,4 +22,5 @@ The Agentforce Mobile SDK empowers you to integrate Salesforce's feature-rich, t
   s.dependency 'SalesforceNetwork'
   s.dependency 'SalesforceUser'
   s.dependency 'swift-markdown-ui'
+  s.dependency 'SharedUI', '~> 1'
 end
