@@ -36,7 +36,7 @@ parse_opts ()
         exit 1
     fi
 
-    valid_branch_regex='^[a-zA-Z0-9_][a-zA-Z0-9_]*(/[a-zA-Z0-9_][a-zA-Z0-9_]*)?$'
+    valid_branch_regex='^[a-zA-Z0-9_][a-zA-Z0-9_.\-]*(/[a-zA-Z0-9_][a-zA-Z0-9_.\-]*)?$'
     if [[ "${OPT_BRANCH}" =~ $valid_branch_regex ]]
      then
          # No action
@@ -53,13 +53,13 @@ parse_opts ()
         exit 1
     fi
 
-    valid_version_regex='^[0-9]+\.[0-9]+\.[0-9]+$'
+    valid_version_regex='^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9][a-zA-Z0-9.]*)?$'
     if [[ "${OPT_VERSION}" =~ $valid_version_regex ]]
      then
          # No action
             :
      else
-        echo "${OPT_VERSION} is not a valid version name.  Should be in the format <integer.integer.interger>"
+        echo "${OPT_VERSION} is not a valid version name.  Should be in the format <integer.integer.integer> or <integer.integer.integer-prerelease>"
         exit 2
     fi
 
