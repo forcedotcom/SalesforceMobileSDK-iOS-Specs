@@ -15,4 +15,9 @@ Pod::Spec.new do |s|
 
   s.dependency 'SharedUI', '~> 1.5'
   s.dependency 'SLDSIcons', '~> 1.2'
+  s.dependency 'SalesforceNavigation'
+  s.dependency 'SalesforceLogging'
+  s.dependency 'SalesforceNetwork'
+  s.dependency 'SalesforceUser'
+  s.dependency 'SalesforceCache'
 end
