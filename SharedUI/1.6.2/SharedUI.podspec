@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/salesforce/SharedUI-iOS'
   s.license          = { :type => 'Salesforce', :file => 'TERMS_OF_USE.txt' }
   s.author           = { 'Salesforce MNR' => 'mnr-mobile@salesforce.com' }
-  s.source           = { :http => 'https://github.com/salesforce/SharedUI-iOS/releases/download/1.6.2/SharedUI.xcframework.zip' }
+  s.source           = { :http => "https://github.com/salesforce/SharedUI-iOS/releases/download/#{s.version}/SharedUI.xcframework.zip" }
 
   s.ios.deployment_target = '17.0'
   s.swift_versions = ["5.0", "5.1"]
