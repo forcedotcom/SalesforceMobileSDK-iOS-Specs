@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AgentforceVoice'
-  s.version          = '264.2.0-rc1'
+  s.version          = '264.2.0-rc2'
   s.summary          = 'Voice capabilities for the Agentforce Mobile SDK'
   s.description      = <<-DESC
 AgentforceVoice provides real-time voice interaction capabilities for the Agentforce Mobile SDK, enabling conversational AI experiences through speech in your iOS applications.
@@ -9,7 +9,7 @@ AgentforceVoice provides real-time voice interaction capabilities for the Agentf
   s.homepage         = 'https://github.com/salesforce/AgentforceMobileSDK-iOS'
   s.license          = { :type => 'Salesforce', :file => 'LICENSE.txt' }
   s.author           = { 'Mobile Agentforce SDK' => 'mobile-agentforcesdk-public@salesforce.com' }
-  s.source           = { :http => 'https://github.com/salesforce/AgentforceMobileSDK-iOS/releases/download/264.2.0-rc1/AgentforceMobileVoice-264-2-0.xcframework.zip' }
+  s.source           = { :http => 'https://github.com/salesforce/AgentforceMobileSDK-iOS/releases/download/264.2.0-rc2/AgentforceMobileVoice-264-2-0.xcframework.zip' }
 
   s.ios.deployment_target = '18.0'
   s.swift_versions = ["5.0", "5.1"]
@@ -17,7 +17,7 @@ AgentforceVoice provides real-time voice interaction capabilities for the Agentf
   s.vendored_framework = 'AgentforceVoice.xcframework'
 
   # Derived from the root podspec at release time (podspec_dependencies.rb).
-  s.dependency 'AgentforceService', '264.2.0-rc1'
+  s.dependency 'AgentforceService', '264.2.0-rc2'
   s.dependency 'SalesforceNetwork'
   s.dependency 'SalesforceLogging'
   s.dependency 'LiveKitClient-XCFramework', '~> 2.16.0'
